@@ -2,7 +2,7 @@
   "name": "speak-claude",
   "displayName": "Speak Claude",
   "description": "Voice-to-text input using WhisperX for VS Code and Claude Code",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "publisher": "slycreator",
   "icon": "icon.png",
   "repository": {

@@ -89,28 +89,34 @@ Then press `Cmd+Shift+C` to start using voice input!
 
 ## Usage
 
+### Two Ways to Start Recording
+
+**Option 1: Keyboard Shortcut (Recommended)**
+- Press `Cmd+Shift+C` (Mac) or `Ctrl+Shift+C` (Windows/Linux)
+
+**Option 2: Status Bar Button**
+- Click the **"Speak Claude"** button in the status bar (bottom-right corner of VS Code)
+
+![Status Bar Button](https://raw.githubusercontent.com/SlyCreator/speak-claude/main/vscode-voice-to-text/status-bar.png)
+
 ### Basic Usage
 
-1. **Start Recording**: Press `Cmd+Shift+C` (Mac) or `Ctrl+Shift+C` (Windows/Linux)
+1. **Start Recording**: Use keyboard shortcut or click status bar button
    - Status bar will show "🎤 Recording..."
 
 2. **Speak**: Say what you want to transcribe
 
-3. **Stop Recording**: Press `Cmd+Shift+C` again
+3. **Stop Recording**: Press the shortcut again or click the status bar button
    - Extension sends audio to WhisperX
    - Transcribed text appears at cursor position
 
 ### Using with Claude Code
 
 1. Open Claude Code chat (`Esc` to focus input)
-2. Press `Cmd+Shift+C`
+2. Start recording (keyboard or status bar button)
 3. Speak your prompt
-4. Press `Cmd+Shift+C` to stop
+4. Stop recording
 5. Text appears in Claude Code input
-
-### Alternative: Status Bar Button
-
-Click the "🔊 Voice" button in the status bar (bottom right) to start/stop recording.
 
 ## Configuration
 
