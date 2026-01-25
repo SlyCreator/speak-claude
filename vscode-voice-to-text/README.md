@@ -1,6 +1,12 @@
-# Voice to Text for VS Code
+# Speak Claude - Voice to Text for VS Code
 
-Voice-to-text extension for VS Code that uses your local WhisperX service for transcription. Perfect for dictating prompts to Claude Code or any other text input in VS Code.
+🎤 Voice-to-text extension for VS Code and Claude Code using local WhisperX transcription. Privacy-first, runs entirely on your machine!
+
+**Quick Start:**
+1. Install this extension from VS Code Marketplace
+2. Clone the repo: `git clone https://github.com/SlyCreator/speak-claude.git`
+3. Run WhisperX: `cd speak-claude && docker-compose up -d`
+4. Press `Cmd+Shift+C` anywhere in VS Code to dictate!
 
 ## Features
 
@@ -11,7 +17,37 @@ Voice-to-text extension for VS Code that uses your local WhisperX service for tr
 
 ## Prerequisites
 
-### 1. SoX (Sound eXchange)
+> ⚠️ **IMPORTANT**: This extension requires the WhisperX service to be running locally. You must clone the repository and set up WhisperX before using this extension.
+
+### 1. Clone the Repository
+
+First, clone the Speak Claude repository to get the WhisperX service:
+
+```bash
+git clone https://github.com/SlyCreator/speak-claude.git
+cd speak-claude
+```
+
+### 2. Set Up WhisperX Service
+
+**Option A: Docker (Recommended)**
+
+```bash
+docker-compose up -d
+```
+
+The service will start at `http://localhost:48001`
+
+**Option B: Manual Python Setup**
+
+```bash
+cd whisperx-service
+pip install -r requirements.txt
+pip install whisperx
+uvicorn main:app --host 0.0.0.0 --port 48001
+```
+
+### 3. Install SoX (Sound eXchange)
 
 The extension uses SoX for audio recording. Install it:
 
@@ -28,49 +64,28 @@ sudo apt-get install sox libsox-fmt-all
 **Windows:**
 Download from [SoX SourceForge](https://sourceforge.net/projects/sox/files/sox/)
 
-### 2. WhisperX Service
-
-Make sure your WhisperX service is running:
-
-```bash
-cd whisperx-service
-pip install -r requirements.txt
-pip install whisperx
-uvicorn main:app --host 0.0.0.0 --port 48001
-```
-
 ## Installation
 
-### Option A: Install from VSIX (Recommended)
+### Install from VS Code Marketplace (Recommended)
 
-1. Build the extension:
-   ```bash
-   cd vscode-voice-to-text
-   npm install
-   npm run compile
-   ```
+1. Open VS Code
+2. Go to Extensions (`Cmd+Shift+X` or `Ctrl+Shift+X`)
+3. Search for "Speak Claude"
+4. Click Install
 
-2. Install in VS Code:
-   - Open VS Code
-   - Press `Cmd+Shift+P` (Mac) or `Ctrl+Shift+P` (Windows/Linux)
-   - Type "Extensions: Install from VSIX"
-   - Select the generated `voice-to-text-1.0.0.vsix` file
+Or install via command line:
+```bash
+code --install-extension slycreator.speak-claude
+```
 
-### Option B: Development Mode
+### After Installation
 
-1. Install dependencies:
-   ```bash
-   cd vscode-voice-to-text
-   npm install
-   npm run compile
-   ```
+Make sure you have:
+1. ✅ Cloned the repository (see Prerequisites above)
+2. ✅ WhisperX service running at `http://localhost:48001`
+3. ✅ SoX installed on your system
 
-2. Open in VS Code:
-   ```bash
-   code .
-   ```
-
-3. Press `F5` to launch Extension Development Host
+Then press `Cmd+Shift+C` to start using voice input!
 
 ## Usage
 
