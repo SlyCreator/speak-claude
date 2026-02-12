@@ -2,7 +2,9 @@
 
 🎤 Voice-to-text extension for VS Code and Claude Code using local WhisperX transcription. Privacy-first, runs entirely on your machine!
 
-**Quick Start:**
+> **Want to skip the local setup?** Try [**Speak Claw**](https://marketplace.visualstudio.com/items?itemName=slycreator.speakclaw) — our cloud-powered version. No Docker, no WhisperX, no local transcription service. Just install, add your API token, and start speaking. [Get Speak Claw →](https://speakclaw.com)
+
+**Quick Start (self-hosted):**
 1. Install this extension from VS Code Marketplace
 2. Clone the repo: `git clone https://github.com/SlyCreator/speak-claude.git`
 3. Run WhisperX: `cd speak-claude && docker-compose up -d`
